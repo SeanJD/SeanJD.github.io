@@ -10,7 +10,7 @@ import js.Lib;
 class Main {
 	
 	static function main() {
-		Lib.alert("Hello GIthub Pages!");
+		Lib.alert("kasetari_1");
 	}
 	
 }

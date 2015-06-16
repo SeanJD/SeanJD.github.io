@@ -2,7 +2,7 @@
 var Main = function() { };
 Main.__name__ = true;
 Main.main = function() {
-	js.Lib.alert("Hello GIthub Pages!");
+	js.Lib.alert("kasetari_1");
 };
 var js = {};
 js.Boot = function() { };
