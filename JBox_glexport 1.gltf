@@ -1,0 +1,370 @@
+{
+	"asset":
+	{
+		"version": "2.0",
+		"generator": "Unreal Engine 5.2.1"
+	},
+	"scene": 0,
+	"accessors": [
+		{
+			"bufferView": 0,
+			"count": 7,
+			"type": "MAT4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 1,
+			"count": 151,
+			"type": "SCALAR",
+			"componentType": 5126,
+			"min": [ 0 ],
+			"max": [ 5 ]
+		},
+		{
+			"bufferView": 2,
+			"count": 151,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 3,
+			"count": 151,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 4,
+			"count": 151,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 5,
+			"count": 3300,
+			"type": "SCALAR",
+			"componentType": 5123
+		},
+		{
+			"bufferView": 6,
+			"count": 632,
+			"type": "VEC3",
+			"componentType": 5126,
+			"min": [ 2.73565841, -7.74185996e-17, -1.26434159 ],
+			"max": [ 5.26434135, 6.56991577, 1.26434135 ]
+		},
+		{
+			"bufferView": 7,
+			"count": 632,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 8,
+			"count": 632,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 9,
+			"count": 632,
+			"type": "VEC2",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 10,
+			"count": 632,
+			"type": "VEC4",
+			"componentType": 5121
+		},
+		{
+			"bufferView": 11,
+			"count": 632,
+			"type": "VEC4",
+			"componentType": 5121,
+			"normalized": true
+		},
+		{
+			"bufferView": 12,
+			"count": 632,
+			"type": "VEC4",
+			"componentType": 5121
+		},
+		{
+			"bufferView": 13,
+			"count": 632,
+			"type": "VEC4",
+			"componentType": 5121,
+			"normalized": true
+		}
+	],
+	"animations": [
+		{
+			"name": "NewLevelSequence_0",
+			"channels": [
+				{
+					"sampler": 0,
+					"target":
+					{
+						"node": 5,
+						"path": "translation"
+					}
+				},
+				{
+					"sampler": 1,
+					"target":
+					{
+						"node": 5,
+						"path": "rotation"
+					}
+				},
+				{
+					"sampler": 2,
+					"target":
+					{
+						"node": 5,
+						"path": "scale"
+					}
+				}
+			],
+			"samplers": [
+				{
+					"input": 1,
+					"output": 2
+				},
+				{
+					"input": 1,
+					"output": 3
+				},
+				{
+					"input": 1,
+					"output": 4
+				}
+			]
+		}
+	],
+	"buffers": [
+		{
+			"uri": "JBox_glexport.bin",
+			"byteLength": 54140
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 448
+		},
+		{
+			"buffer": 0,
+			"byteLength": 604,
+			"byteOffset": 448
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1812,
+			"byteOffset": 1052
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2416,
+			"byteOffset": 2864
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1812,
+			"byteOffset": 5280
+		},
+		{
+			"buffer": 0,
+			"byteLength": 6600,
+			"byteOffset": 7092,
+			"target": 34963
+		},
+		{
+			"buffer": 0,
+			"byteLength": 7584,
+			"byteOffset": 13692,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 7584,
+			"byteOffset": 21276,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 10112,
+			"byteOffset": 28860,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 5056,
+			"byteOffset": 38972,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2528,
+			"byteOffset": 44028,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2528,
+			"byteOffset": 46556,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2528,
+			"byteOffset": 49084,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 2528,
+			"byteOffset": 51612,
+			"target": 34962
+		}
+	],
+	"materials": [
+		{
+			"name": "standardSurface2",
+			"pbrMetallicRoughness":
+			{
+				"baseColorFactor": [ 0.798959315, 0.520142198, 0.645008683, 1 ],
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			}
+		}
+	],
+	"meshes": [
+		{
+			"name": "JackBox_04",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 6,
+						"NORMAL": 7,
+						"TANGENT": 8,
+						"TEXCOORD_0": 9,
+						"JOINTS_0": 10,
+						"JOINTS_1": 12,
+						"WEIGHTS_0": 11,
+						"WEIGHTS_1": 13
+					},
+					"indices": 5,
+					"material": 0
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "Brush0"
+		},
+		{
+			"name": "DirectionalLight",
+			"translation": [ -1.66774011, 2.39181876, 2.06861973 ],
+			"rotation": [ -0.351645887, 0.46437943, -0.406888396, 0.703660965 ],
+			"scale": [ 2.5, 2.5, 2.5 ],
+			"children": [ 2 ]
+		},
+		{
+			"name": "DirectionalLight",
+			"rotation": [ -0, -0.707106829, 0, 0.707106769 ],
+			"extensions":
+			{
+				"KHR_lights_punctual":
+				{
+					"light": 0
+				}
+			}
+		},
+		{
+			"name": "DefaultPhysicsVolume0"
+		},
+		{
+			"name": "AbstractNavData-Default"
+		},
+		{
+			"name": "JackBox_04",
+			"skin": 0,
+			"mesh": 0,
+			"children": [ 6 ]
+		},
+		{
+			"name": "root",
+			"translation": [ 3.99999905, -1.73871917e-09, -6.3108871e-32 ],
+			"rotation": [ 0.505404294, 0.494536638, 0.494536638, 0.505404294 ],
+			"children": [ 7 ]
+		},
+		{
+			"name": "joint2",
+			"translation": [ 0.7761994, 1.03311994e-18, -0.0168721341 ],
+			"rotation": [ 1.9668085e-32, -0.00815039873, -4.99067894e-19, -0.9999668 ],
+			"children": [ 8 ]
+		},
+		{
+			"name": "joint3",
+			"translation": [ 0.762728274, -6.97733885e-11, -0.00421917252 ],
+			"rotation": [ -0.999965787, -6.16356827e-11, 0.00827258546, -7.45030659e-09 ],
+			"children": [ 9 ]
+		},
+		{
+			"name": "joint4",
+			"translation": [ 0.796988964, -1.00774372e-07, -0.00941970944 ],
+			"rotation": [ -0.99996537, -8.41464129e-15, 0.00833296869, -1.05007658e-12 ],
+			"children": [ 10 ]
+		},
+		{
+			"name": "joint5",
+			"translation": [ 0.769349277, -1.91899996e-10, -0.00449983962 ],
+			"rotation": [ 2.29841835e-13, -0.00277774478, 8.27731564e-11, -0.999996245 ],
+			"children": [ 11 ]
+		},
+		{
+			"name": "joint6",
+			"translation": [ 0.776380956, 5.27548328e-13, -1.20940831e-06 ],
+			"rotation": [ -6.66274829e-14, 0.000805149961, -8.27734756e-11, -0.999999702 ],
+			"children": [ 12 ]
+		},
+		{
+			"name": "joint7",
+			"translation": [ 2.79722929, -5.05300024e-10, -0.000210066486 ],
+			"rotation": [ -1.89691147e-18, 0.706537247, -4.77943138e-17, -0.707675874 ]
+		}
+	],
+	"scenes": [
+		{
+			"name": "TestLevelExport_01",
+			"nodes": [ 0, 1, 3, 4, 5 ]
+		}
+	],
+	"skins": [
+		{
+			"name": "JackBox_04_Skeleton",
+			"inverseBindMatrices": 0,
+			"skeleton": 5,
+			"joints": [ 6, 7, 8, 9, 10, 11, 12 ]
+		}
+	],
+	"extensions":
+	{
+		"KHR_lights_punctual":
+		{
+			"lights": [
+				{
+					"name": "DirectionalLight",
+					"type": "directional",
+					"intensity": 10
+				}
+			]
+		}
+	},
+	"extensionsUsed": [
+		"KHR_lights_punctual"
+	]
+}
