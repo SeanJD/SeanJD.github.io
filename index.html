@@ -1,0 +1,182 @@
+
+<!doctype HTML>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <title>Giving Life To BCBF At Home</title>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+    <script>
+        const macPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
+        const IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const IS_SAFARI = !!navigator.userAgent.match(/Version\/[\d.]+.*Safari/);
+        const IOS_VERSION = (() => {
+            if (!IS_IOS) {
+                return;
+            }
+            let match = navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+            if (!match) {
+                return;
+            }
+            return [
+                parseInt(match[1], 10),
+                parseInt(match[2], 10),
+                parseInt(match[3] || 0, 10),
+            ].join('.');
+        })();
+
+        window.onload = () => {
+            const majorVersion = IOS_VERSION && IOS_VERSION.split('.')[0];
+            const modelViewers = [...document.querySelectorAll('model-viewer')];
+
+            if (IS_IOS && majorVersion && majorVersion < 13) {
+                modelViewers.forEach((e) => e.setAttribute('ar-modes', 'scene-viewer'));
+
+                document.querySelector('.fallback p').remove();
+                document.querySelector('.fallback p').innerText = 'OPS! Your device\n is not supported.'
+                document.querySelector('.fallback').style.visibility = 'visible';
+                return;
+            }
+
+            if (IS_IOS && !IS_SAFARI) {
+                [...document.querySelectorAll('.fallback a')].forEach((e) => e.remove());
+                document.querySelector('.fallback p').remove();
+                document.querySelector('.fallback p').innerText = 'OPS! This browser\n is not supported.\nPlease try with Safari.'
+                document.querySelector('.fallback').style.visibility = 'visible';
+                return;
+            }
+
+            if (majorVersion && majorVersion >= 13) {
+                return;
+            }
+
+            modelViewers.forEach((el) => {
+                el.addEventListener('click', (ev, target) => {
+                    const fallback = document.querySelector('.fallback');
+
+                    setTimeout(() => {
+                        fallback.style.visibility = 'visible';
+                    }, 8000);
+
+                    setInterval(() => {
+                        if (fallback.parentElement) {
+                            fallback.remove();
+                        }
+                    }, 17 * 1000);
+                })
+            })
+        };
+    </script>
+
+    <body style='overflow: hidden;'>
+        <div class="column-left">
+            <div>
+                <div class="title">
+                    <p>giving life</p>
+                    <p>to bcbf</p>
+                    <p>at home</p>
+                </div>
+                <div class="instructions">
+                    <p>Choose an</p>
+                    <p>illustration</p>
+                </div>
+            </div>
+            <div class="fallback">
+                <p>OPS! Your device</p>
+                <p>is not supported.</p>
+            </div>
+            <div class="bottom-block">
+                <div class="bcbf-logo">
+                    <img src="logo.png"/>
+                </div>
+                <div class="chialab-logo">
+                    <p>chialab</p>
+                    <p class="fish">ẞ</p>
+                </div>
+            </div>
+       </div>
+       <div class="column-right">
+            <model-viewer
+                data-name="baloon"
+                src="./models/baloon/baloon.glb"
+                ios-src="./models/baloon/baloon.usdz"
+                ar
+                ar-modes="scene-viewer quick-look"
+                camera-controls
+                auto-rotate
+                reveal="interaction"
+                exposure="0.7"
+                poster="./images/baloon.png"
+                style="height: 24%;"
+            >
+                <button slot="ar-button" class="activate-ar">
+                </button>
+            </model-viewer>
+            <model-viewer
+                data-name="couple"
+                src="./models/couple/couple.glb"
+                ios-src="./models/couple/couple.usdz"
+                ar
+                ar-modes="scene-viewer quick-look"
+                camera-controls
+                auto-rotate
+                reveal="interaction"
+                exposure="0.7"
+                poster="./images/couple.png"
+                style="height: 19%;"
+            >
+                <button slot="ar-button" class="activate-ar">
+                </button>
+            </model-viewer>
+            <model-viewer
+                data-name="animal"
+                src="./models/animal/animal.glb"
+                ios-src="./models/animal/animal.usdz"
+                ar
+                ar-modes="scene-viewer quick-look"
+                camera-controls
+                auto-rotate
+                reveal="interaction"
+                exposure="0.7"
+                poster="./images/animal.png"
+                style="height: 20%;"
+            >
+                <button slot="ar-button" class="activate-ar">
+                </button>
+            </model-viewer>
+            <model-viewer
+                data-name="jump"
+                src="./models/jump/jump.glb"
+                ios-src="./models/jump/jump.usdz"
+                ar
+                ar-modes="scene-viewer quick-look"
+                camera-controls
+                auto-rotate
+                reveal="interaction"
+                exposure="0.7"
+                poster="./images/jump.png"
+                style="height: 18%;"
+            >
+                <button slot="ar-button" class="activate-ar">
+                </button>
+            </model-viewer>
+            <model-viewer
+                data-name="look"
+                src="./models/look/look.glb"
+                ios-src="./models/look/look.usdz"
+                ar
+                ar-modes="scene-viewer quick-look"
+                camera-controls
+                auto-rotate
+                reveal="interaction"
+                exposure="0.7"
+                poster="./images/look.png"
+                style="height: 19%;"
+            >
+                <button slot="ar-button" class="activate-ar">
+                </button>
+            </model-viewer>
+       </div>
+    </body>
+</html>
